@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power House Dashboard</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h1 {
+            color: gold;
+        }
+
+        .busbar {
+            width: 90%;
+            height: 5px;
+            background: gold;
+            margin: 30px auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .dg {
+            border: 1px solid #444;
+            padding: 15px;
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .running {
+            color: #00ff00;
+        }
+
+        .stopped {
+            color: red;
+        }
+
+        .value {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>POWER HOUSE DASHBOARD</h1>
+
+<div class="busbar"></div>
+
+<div class="container">
+
+    <div class="dg" id="dg1">
+        <h3>DG 1</h3>
+        <div class="status running">RUNNING</div>
+        <div class="value">120 kW</div>
+        <div class="value">415 V</div>
+        <div class="value">50 Hz</div>
+    </div>
+
+    <div class="dg" id="dg2">
+        <h3>DG 2</h3>
+        <div class="status stopped">STOPPED</div>
+        <div class="value">0 kW</div>
+        <div class="value">0 V</div>
+        <div class="value">0 Hz</div>
+    </div>
+
+    <div class="dg" id="dg3">
+        <h3>DG 3</h3>
+        <div class="status running">RUNNING</div>
+        <div class="value">120 kW</div>
+        <div class="value">415 V</div>
+        <div class="value">50 Hz</div>
+    </div>
+
+    <div class="dg" id="dg4">
+        <h3>DG 4</h3>
+        <div class="status stopped">STOPPED</div>
+        <div class="value">0 kW</div>
+        <div class="value">0 V</div>
+        <div class="value">0 Hz</div>
+    </div>
+
+    <div class="dg" id="dg5">
+        <h3>DG 5</h3>
+        <div class="status running">RUNNING</div>
+        <div class="value">120 kW</div>
+        <div class="value">415 V</div>
+        <div class="value">50 Hz</div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
